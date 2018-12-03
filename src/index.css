@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+html{font-size: 26.66666667vw;}
+  *{margin: 0;padding: 0;box-sizing:border-box;}
+  ul li{list-style: none;}
+  body{font-size: .16rem;overflow-x:hidden;}
+  a{text-decoration: none;color:black;}
+  img{display: block;}
+  .clear:after{content: "";display: block;clear: both;}
+  html body{height:100%;overflow-x:hidden;}
+  .l{float: left}
+  .r{float: right}
+/*****************各种动画***********************/
+  .example-enter {
+  opacity: 0.01;
+  transform: translateX(100px);
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+
+  transition: all 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+  transform: translateX(0px);
+
+}
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transform: translateX(100px);
+
+  transition: all 300ms ease-in;
+}
+
+
+.bounce-enter-active {
+animation: bounce-in .5s;
+}
+.bounce-leave-active {
+animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+0% {
+  /* transform: translateX(-100%);
+  自身的100% */
+  opacity: 0;
+}
+
+100% {
+  transform: translateX(0px);
+  opacity: 1;
+}
+} 
+
+
+.kerwin-enter-active {
+animation: kerwin-in .5s;
+}
+.kerwin-leave-active {
+animation: kerwin-in .5s reverse;
+}
+@keyframes kerwin-in {
+0% {
+  /*  transform: translateX(-100%);
+  自身的100% */
+  opacity: 0; 
+}
+
+100% {
+  transform: translateX(0px);
+  opacity: 1;
+}
+}
+/*************************************/
