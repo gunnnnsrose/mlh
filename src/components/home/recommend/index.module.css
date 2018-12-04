@@ -1,0 +1,42 @@
+.main {
+  width: 100%; }
+  .main .ad {
+    width: 100%;
+    position: relative; }
+    .main .ad img {
+      width: 100%; }
+    .main .ad .h3 {
+      position: absolute;
+      top: 3.2rem;
+      z-index: 1;
+      width: 100%;
+      height: .4rem;
+      line-height: .4rem;
+      text-align: center;
+      color: #fff;
+      font-size: .28rem; }
+    .main .ad .p {
+      position: absolute;
+      top: 3.6rem;
+      z-index: 1;
+      width: 100%;
+      height: .4rem;
+      line-height: .4rem;
+      text-align: center;
+      color: #fff;
+      font-size: .14rem; }
+  .main .img {
+    width: 100%;
+    margin-top: .05rem; }
+  .main .type {
+    width: 100%; }
+    .main .type .h2 {
+      width: 100%;
+      height: .4rem;
+      line-height: .4rem; }
+      .main .type .h2 .product {
+        width: 100%; }
+        .main .type .h2 .product img {
+          width: 100%; }
+
+/*# sourceMappingURL=index.module.css.map */

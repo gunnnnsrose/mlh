@@ -27,17 +27,17 @@ class Home extends Component{
 	  	    <li className={css.li+" l"}><NavLink to="/home/kids">婴童 </NavLink></li>
 	      </ul>
 	  	</div>
-	    {this.props.children}
+	  	<section>
+	    	{this.props.children}
+	  	</section>
 	  </div>
 	}
 
 	componentDidMount() {
 	  window.onscroll = this.scroll.bind(this);
 	}
-	conponentWillUnmount() {
-	  window.onscroll = null;
-	}
 	scroll() {
+		console.log(document.documentElement.scrollTop)
 	  if((document.documentElement.scrollTop||document.body.scrollTop)>0) {
 		this.setState({
 			isScroll: true
@@ -47,6 +47,10 @@ class Home extends Component{
 			isScroll: false
 		})
 	  }
+	}
+	
+	conponentWillUnmount() {
+	  window.onscroll = null;
 	}
 }
 
