@@ -32,12 +32,25 @@ class Recommend extends Component{
 		  	  	item.events.map(info=>
 		  	  	  <div className={css.product} key={item.eventId}>
 		  	  	  	<img className={css.productImg} src={info.imageUrl} alt=""/>
+		  	  	  	<p className={css.p1}>{info.englishName}</p>
+		  	  	  	<p className={css.p2}>{info.chineseName}</p>
+		  	  	  	<p className={css.p3}>{info.discountText}</p>
 		  	  	  </div>
 	  	  		)
 		  	  }
 		  	</div> 
 	  	  )
 		}
+		<div className={css.footer}>
+		  <p className={css.phone}>400-664-6698</p>
+		  <p className={css.page}>
+		  	<span> 首页 </span>|
+		  	<span> 客户端 </span>|
+		  	<span> 登录 </span>|
+		  	<span> 注册 </span>
+		  </p>
+		  <p className={css.address}>浙ICP备16004860号-1</p>
+		</div>
 	  </div>
 	}
 

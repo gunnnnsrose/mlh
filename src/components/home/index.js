@@ -28,7 +28,7 @@ class Home extends Component{
 	      </ul>
 	  	</div>
 	  	<section>
-	    	{this.props.children}
+	      {this.props.children}
 	  	</section>
 	  </div>
 	}
@@ -37,14 +37,13 @@ class Home extends Component{
 	  window.onscroll = this.scroll.bind(this);
 	}
 	scroll() {
-		console.log(document.documentElement.scrollTop)
 	  if((document.documentElement.scrollTop||document.body.scrollTop)>0) {
 		this.setState({
-			isScroll: true
+		  isScroll: true
 		})
 	  } else {
 	  	this.setState({
-			isScroll: false
+		  isScroll: false
 		})
 	  }
 	}
