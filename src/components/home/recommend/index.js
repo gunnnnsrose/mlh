@@ -68,7 +68,7 @@ class Recommend extends Component{
 	  });
 
 	  axios.get('/appapi/home/eventForH5?params=%7B%7D&timestamp=1543905725369&summary=63d15f190ce5c694469c17aa442242d4&platform_code=H5').then(res=>{
-	  	console.log(res.data);
+	  	// console.log(res.data);
 
 	  	this.setState({
 	  	  datalist: res.data.lists
