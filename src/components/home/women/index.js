@@ -34,6 +34,28 @@ class Women extends Component{
 			</div>
   	  	  )
 	  	}
+	  	<ul className={css.class}>
+	  	  {
+		  	this.state.datalist.map(item=>
+			  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.eventId)}>
+	  	  	  	<img className={css.productImg} src={item.imageUrl} alt=""/>
+	  	  	  	<p className={css.p1}>{item.englishName}</p>
+	  	  	  	<p className={css.p2}>{item.chineseName}</p>
+	  	  	  	<p className={css.p3}>{item.discountText}</p>
+	  	  	  </li>
+		  	)
+	  	  }
+	  	</ul>
+	  	<div className={css.footer}>
+		  <p className={css.phone}>400-664-6698</p>
+		  <p className={css.page}>
+		  	<span> 首页 </span>|
+		  	<span> 客户端 </span>|
+		  	<span> 登录 </span>|
+		  	<span> 注册 </span>
+		  </p>
+		  <p className={css.address}>浙ICP备16004860号-1</p>
+		</div>
 	  </div>
 	}
 
@@ -45,20 +67,21 @@ class Women extends Component{
 	  });
 
 	  axios.get('/appapi/cms/cmsDetail/v3?silo=2013000100000000001&ids=2120000100000000276&timestamp=1543927060288&summary=054ac8c6b1b340d21005114a1d8eb0f0&platform_code=H5').then(res=>{
-	  	console.log(res.data);
 	  	this.setState({
 	  	  imgs: res.data.resultList
 	  	})
 	  });
 
-	  axios.get('/appapi/home/eventForH5?params=%7B%7D&timestamp=1543905725369&summary=63d15f190ce5c694469c17aa442242d4&platform_code=H5').then(res=>{
-	  	// console.log(res.data);
-
+	  axios.get('/appapi/silo/eventForH5?categoryId=women&pageIndex=1&timestamp=1543969746419&summary=f90d18b8b42ca704b7e5a0939d0e68f4&platform_code=H5').then(res=>{
 	  	this.setState({
-	  	  datalist: res.data.lists
+	  	  datalist: res.data.eventList
 	  	})
-	  })
+	  });
 
+	}
+
+	jump(id) {
+	  this.props.history.push(`/list/${id}`);
 	}
 }
 

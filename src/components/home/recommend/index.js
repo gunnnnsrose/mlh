@@ -26,19 +26,19 @@ class Recommend extends Component{
   		<img className={css.img} src={this.state.img} alt=""/>
 		{
 		  this.state.datalist.map(item=>
-		  	<div className={css.type} key={item.name}>
+		  	<ul className={css.class} key={item.name}>
 		  	  <h2 className={css.h2}>{item.name}</h2>
 		  	  {
 		  	  	item.events.map(info=>
-		  	  	  <div className={css.product} key={item.eventId}>
+		  	  	  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.eventId)}>
 		  	  	  	<img className={css.productImg} src={info.imageUrl} alt=""/>
 		  	  	  	<p className={css.p1}>{info.englishName}</p>
 		  	  	  	<p className={css.p2}>{info.chineseName}</p>
 		  	  	  	<p className={css.p3}>{info.discountText}</p>
-		  	  	  </div>
+		  	  	  </li>
 	  	  		)
 		  	  }
-		  	</div> 
+		  	</ul> 
 	  	  )
 		}
 		<div className={css.footer}>
@@ -74,6 +74,10 @@ class Recommend extends Component{
 	  	  datalist: res.data.lists
 	  	})
 	  })
+	}
+
+	jump(id) {
+	  this.props.history.push(`/list/${id}`);
 	}
 
 }
