@@ -31,7 +31,6 @@ const router =(
 						<Redirect from="/home" to="/home/recommend"/>
 					</Switch>
 				</Home>
-
 			}/>
 			<Route path="/list" component={List}/>
 			<Route path="/detail" component={Detail}/>

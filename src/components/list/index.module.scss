@@ -1,7 +1,4 @@
 .sss{color:#222;}
-.hide{
-	display:none;
-}
 .head{
 	width:100%;
 	height:.98rem;
@@ -121,4 +118,21 @@
 	}
 }
 
+.huiding{
+	width:.48rem;
+	height:.48rem;
+	border-radius:50%;
+	position:fixed;
+	bottom:.15rem;
+	right:.15rem;
+	display:block;
+	.img1{
+		display:block;
+		width:100%;
+		height:100%;
+	}
+}
+.hide{
+	display:none;
+}
 

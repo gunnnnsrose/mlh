@@ -15,7 +15,7 @@ class List extends Component{
 
 	render(){
 		return <div className={css.sss}>
-				<a />
+				<div id="zhiding"></div>
 				<div className={this.state.isShow?css.head:css.head+' '+css.hide}>
 					<div className={css.head1}>
 						<div className={css.fh}>
@@ -61,7 +61,10 @@ class List extends Component{
 						)
 					}		
 				</div>
-			}			
+			}
+			<a href="#zhiding" className={this.state.isShow?css.huiding+' '+css.hide:css.huiding} >
+				<img src="./img/返回顶部.png" alt="" className={css.img1}/>
+			</a>			
 		</div>
 	}
 
@@ -69,7 +72,7 @@ class List extends Component{
 		axios({
 			/*url:"/appapi/event/product/v3?pageIndex=1&categoryId=2042204290000005420&key=&sort=&timestamp=1543883628691&summary=a090b7849facdafa80f787bf1cf13d95&platform_code=H5",
 			method:'get'*/
-			url:`/appapi/event/product/v3?pageIndex=1&categoryId=${this.props.match.paramsid}&key=&sort=&timestamp=1543883628691&summary=a090b7849facdafa80f787bf1cf13d95&platform_code=H5`,
+			url:`/appapi/event/product/v3?pageIndex=1&categoryId=${this.props.match.params.id}&key=&sort=&timestamp=1543883628691&summary=a090b7849facdafa80f787bf1cf13d95&platform_code=H5`,
 			method:'get'
 		}).then(res=>{
 			this.setState({
