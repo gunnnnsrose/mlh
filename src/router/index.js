@@ -32,7 +32,7 @@ const router =(
 					</Switch>
 				</Home>
 			}/>
-			<Route path="/list" component={List}/>
+			<Route path="/list/:id" component={List}/>
 			<Route path="/detail" component={Detail}/>
 			<Route path="/login" component={Login}/>
 			<Route path="/register" component={Register}/>
