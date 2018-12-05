@@ -37,7 +37,7 @@ class Women extends Component{
 	  	<ul className={css.class}>
 	  	  {
 		  	this.state.datalist.map(item=>
-			  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.eventId)}>
+			  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.categoryId)}>
 	  	  	  	<img className={css.productImg} src={item.imageUrl} alt=""/>
 	  	  	  	<p className={css.p1}>{item.englishName}</p>
 	  	  	  	<p className={css.p2}>{item.chineseName}</p>

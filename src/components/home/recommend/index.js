@@ -30,7 +30,7 @@ class Recommend extends Component{
 		  	  <h2 className={css.h2}>{item.name}</h2>
 		  	  {
 		  	  	item.events.map(info=>
-		  	  	  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.eventId)}>
+		  	  	  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.categoryId)}>
 		  	  	  	<img className={css.productImg} src={info.imageUrl} alt=""/>
 		  	  	  	<p className={css.p1}>{info.englishName}</p>
 		  	  	  	<p className={css.p2}>{info.chineseName}</p>
