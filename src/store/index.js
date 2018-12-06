@@ -2,6 +2,10 @@ import {createStore,combineReducers,applyMiddleware,compose} from "redux"
 import thunkMid from "redux-thunk"
 import promiseMid from "redux-promise"
 import testReducer from "./reducers/testReducer"
+import pageReducer from "./reducers/pageReducer"
+import listReducer from "./reducers/listReducer"
+import bannerReducer from "./reducers/bannerReducer"
+import imgReducer from "./reducers/imgReducer"
 // 来来来，看一眼！！！！！！
 // 我们用react-redux 每个组件都不要忘了引入{connect} 处理异步用thunk或promise都可以
 // 你想建的各种reducer写在reducers文件里引入进来
@@ -9,7 +13,11 @@ import testReducer from "./reducers/testReducer"
 // 动这个文件喊一嗓子 不然git乱了 求求老爷们了 
 // 祝你成功!
 const reducer = combineReducers({
-	testReducer//测试用的不用管
+	testReducer,//测试用的不用管
+	pageReducer,
+	listReducer,
+	bannerReducer,
+	imgReducer
 })
 
 
