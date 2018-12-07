@@ -74,7 +74,7 @@ class Recommend extends Component{
 	  	  datalist: res.data.lists
 	  	})
 	  })
-	  console.log(this.prop)
+	
 	}
 
 	jump(id) {

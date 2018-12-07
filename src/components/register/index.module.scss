@@ -1,1 +1,53 @@
 .sss{color:blue;}
+.box{
+	width: 100%;
+	height:100%;
+	padding:.2rem .2rem 0 .35rem;
+	height:6.67rem;
+	overflow-x:hidden; 
+	overflow-y:hidden; 
+	.btn{
+	font-size:.2rem;
+	float:right;
+	}
+}
+
+.registertitle{
+	font-size:.16rem;
+	margin-top: .4rem;
+	line-height: .3rem;
+}
+.smalltitle{
+	font-size:.12rem;
+	color:#666666;
+	line-height: .2rem;
+}
+.registerbox{
+	width:100%;
+	margin-top:.5rem;
+	div{
+		input{
+			outline: none;
+			width:3.05rem;
+			height:.5rem;
+			border:0;
+			box-shadow:#cccccc  .01rem  .01rem  .05rem;
+			margin-bottom: .1rem;
+			padding:.15rem;
+		}
+	}
+	.registerBtn{
+			width:3.05rem;
+			height:.5rem;
+			outline: none;
+			box-shadow:#cccccc  .01rem  .01rem  .05rem;
+			border:0;
+			color:white;
+			font-size:.16rem
+		}
+}
+.message{
+	font-size:.12rem;
+	color:#666666;
+	line-height: .3rem;
+}

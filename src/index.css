@@ -15,7 +15,7 @@ code {
 html{font-size: 26.66666667vw;}
   *{margin: 0;padding: 0;box-sizing:border-box;}
   ul li{list-style: none;}
-  body{font-size: .16rem;overflow-x:hidden;}
+  body{font-size: .16rem;}
   a{text-decoration: none;color:black;}
   img{display: block;}
   .clear:after{content: "";display: block;clear: both;}
