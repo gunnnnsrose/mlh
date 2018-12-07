@@ -64,7 +64,7 @@ class Shoppingcart extends Component{
 				</div>
 			</footer>
 		</div>
-	}ll.-
+	}
 	changeClick(itemId,price){
 		//console.log(this.refs[itemId].checked)
 		if(this.refs[itemId].checked){
