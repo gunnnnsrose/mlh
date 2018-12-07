@@ -6,6 +6,13 @@ import { PullToRefresh, ListView, Button } from 'antd-mobile';
 import action from "./action.js";
 
 class Women extends Component{
+	constructor(props) {
+	  super(props);
+
+	  this.state = {
+	  	page: this.props.page
+	  }
+	}
 
 	render(){
 	  return <div className={css.main}>
@@ -32,7 +39,7 @@ class Women extends Component{
 	  	<ul className={css.class}>
 	  	  {
 		  	this.props.datalist.map(item=>
-			  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.eventId)}>
+			  <li className={css.product} key={item.eventId} onClick={this.jump.bind(this,item.categoryId)}>
 	  	  	  	<img className={css.productImg} src={item.imageUrl} alt=""/>
 	  	  	  	<p className={css.p1}>{item.englishName}</p>
 	  	  	  	<p className={css.p2}>{item.chineseName}</p>
@@ -88,13 +95,18 @@ class Women extends Component{
 	  }
 
 	}
-	// shouldComponentUpdate(state){
-	// 	if(this.props)
-	// }
+	componentWillReceiveProps(state) {
+		// console.log(state);//2
+		console.log(this.props.page);//1
+		if(this.props.page!==state.page){
+			console.log('111');
+			this.props.load(state.page);
+		}
+	}
 	componentDidUpdate(){
 		console.log('update111');
 		console.log(this.props.page);
-		// this.props.load(this.props.page);
+		console.log(this.state.page);
 	}
 
 	jump(id) {
