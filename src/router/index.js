@@ -33,6 +33,7 @@ const router =(
 				</Home>
 			}/>
 			<Route path="/list/:id" component={List}/>
+			{/*<Route path="/detail/:id1/:id2" component={Detail}/>*/}
 			<Route path="/detail" component={Detail}/>
 			<Route path="/login" component={Login}/>
 			<Route path="/register" component={Register}/>

@@ -52,12 +52,14 @@ class List extends Component{
 				<div className={css.pitem}>
 					{
 						this.state.looplist.products.map(item=>
+							/*<div onClick={this.jump.bind(this,this.props.match.params.id,item.productId)} className={css.zhanshi} key={item.productId}>*/
 							<NavLink to="/detail" replace className={css.zhanshi} key={item.productId}>
 								<img className={css.img} src={item.imageUrl} alt=""/>
 								<p className={css.leibie}>{item.brandName}</p>
 								<p className={css.miaoshu}>{item.productName}</p>
 								<p className={css.jiage}>￥{item.itemPriceDto.price}</p>
 							</NavLink>
+							/*</div>*/
 						)
 					}		
 				</div>
@@ -80,6 +82,7 @@ class List extends Component{
 			})
 			console.log(this.state.looplist)
 		})
+		console.log(this.props.match.params.id);
 
 		window.onscroll =this.handleScroll.bind(this);
 	}
@@ -98,6 +101,11 @@ class List extends Component{
 		
 
 	}
+	jump(id1,id2){
+
+		this.props.history.push(`/detail/${id1}/${id2}`);
+	}
 }
 /*http://www.mei.com/appapi/event/product/v3?pageIndex=1&categoryId=2042204290000005420&key=&sort=&timestamp=1543883628691&summary=a090b7849facdafa80f787bf1cf13d95&platform_code=H5*/
+
 export default List
